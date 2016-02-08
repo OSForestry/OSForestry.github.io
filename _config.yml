@@ -1,0 +1,7 @@
+# Site settings
+title: Open Source Forestry
+description: "Forestry software, hardware, and knowledge that is open to all."
+url: "forestry.tech" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
