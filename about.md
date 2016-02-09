@@ -5,12 +5,7 @@ title: About OS Forestry
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
 
 <style type="text/css">
-	html,
-	body {
-		height: 100%;
-		font-size: 0.95rem;
-		padding: 0;
-	}
+	
 	body {
 		background: url(/assets/img/backgrounds/index2.jpg) 0 0 fixed no-repeat;
 		background-color: rgb(32, 45, 28);
