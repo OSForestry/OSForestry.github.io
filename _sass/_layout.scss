@@ -281,11 +281,8 @@ nav ul {
 }
 
 @media screen and (max-width: 570px) {
-    html {
-        font-size: 0.8em;
-    }
     nav {
-        height: inherit;
+        height: initial;
     }
     .nav-bar-top li {
         display: block;
