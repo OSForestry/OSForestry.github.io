@@ -2,24 +2,6 @@
 layout: page
 title: About OS Forestry
 ---
-<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
-
-<style type="text/css">
-	
-	body {
-		background: url(/assets/img/backgrounds/index2.jpg) 0 0 fixed no-repeat;
-		background-color: rgb(32, 45, 28);
-		background-size: cover;
-		font-family: "Roboto", sans-serif;
-		background-source: "https://www.flickr.com/photos/aarmo/14503471674/";
-	}
-	.page-content .wrapper {
-		background: white;
-		padding: 4em;
-		border-radius: 2px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-	}
-</style>
 
 ### The dream that is OS Forestry
 
