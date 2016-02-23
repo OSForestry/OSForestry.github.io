@@ -6,7 +6,7 @@ permalink: /learn/index.html
 
 Here you can learn about many different aspects of forestry, written by many different experts in their respective fields.
 
-Click on a lesson on the right to begin.
+Click on a lesson on the left to begin.
 
 
 
