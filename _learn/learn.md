@@ -1,10 +1,8 @@
 ---
 layout: learn
-title: Learn
+title: OS Forestry - Learn
 permalink: /learn/index.html
 ---
-
-### OS Forestry - Learn
 
 Here you can learn about many different aspects of forestry, written by many different experts in their respective fields.
 
