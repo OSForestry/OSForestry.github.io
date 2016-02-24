@@ -13,7 +13,7 @@
 		}*/
 		.header-panel {
 			height: 144px;
-			min-width: 950px;
+			/*min-width: 950px;*/
 		}
 
 		.header-panel div {
@@ -51,6 +51,7 @@
 		}
 		.page {
 			padding: 2em;
+			background: url(/assets/img/paper/lightfibers.png);
 		}
 		.page ul li {
 			list-style: circle;
@@ -59,13 +60,63 @@
 		em {
 			padding-right: 0.2em;
 		}
+		#right-text-area {
+			position: absolute;
+			top: 0; 
+			right: 0;
+			padding: 64px 5px 0 1em;
+			overflow: auto;
+			height: 100%;
+		}
+		@media screen and (max-width: 600px) {
+			#right-text-area {
+				position: inherit;
+				top: auto; 
+				right: auto;
+				padding: 0;
+				overflow: auto;
+				height: auto;
+			}
+			.header-panel {
+				height: 100px;
+			}
+			.header-panel h1 {
+				position: inherit;
+				bottom: auto;
+				padding-left: 0.75rem;
+			}
+			.header-panel .nav-bar {
+				position: inherit;
+			}
+			#right-text-area .z-depth-3,
+			#right-text-area .card {
+				box-shadow: none;
+			}
+			.page {
+				padding: 0;
+			}
+		}
 </style>
 
 	<body>
-
+		<nav style="background: none; position: absolute; box-shadow: none;" class="hide-on-med-and-up">
+			<div class="nav-wrapper">
+				<a href="#" data-activates="mobile-menu" class="button-collapse right"><i class="material-icons">menu</i></a>
+				{% assign pages = site.learn | sort:"url"  %}
+				<ul class="side-nav" id="mobile-menu">
+					<li><a href="{{ site.baseurl }}/learn">Home</a></li>
+					{% for page in pages %}
+						{% assign page_name =  page.url | remove:"/learn/" %}
+						{% if page_name != "index.html" %}
+							<li><a href="{{ site.baseurl }}{{ page.url }}">{{ page_name }}</a></li>
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+		</nav>
 		<div class="header-panel blue lighten-1">
 			<div class="row">
-				<div class="col s3">
+				<div class="col s12 m4 l3">
 					<a href="/"><h1>OS Forestry</h1></a>
 					<div class="nav-bar">
 						<ul>
@@ -79,7 +130,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col s3 menu">
+			<div class="col s12 m4 l3 menu hide-on-small-only">
 				{% assign pages = site.learn | sort:"url"  %}
 				<ul>
 					<li><a href="{{ site.baseurl }}/learn">Home</a></li>
@@ -91,28 +142,15 @@
 					{% endfor %}
 				</ul>
 			</div>
-			<div class="col s9" style="position: absolute; top: 0; right: 0; padding: 64px 5px 0 1em; overflow: auto; height: 100%;">
+			<div id="right-text-area" class="col s12 m8 l9" style="">
 				<div class="row">
-					<div class="col s10">
+					<div class="col s12">
 						<div class="card white z-depth-3 page" style="margin-top: 0;">
 							<h1 style="font-size: 3em; text-align: center; border-bottom: solid #DCDCDC 1px; margin-bottom: 1em; padding-bottom: 0.25em;">{{ page.title }}</h1>
 							{{ content }}
 						</div>
 					</div>
-					<div class="col s2">
-						<a data-target="full-screen" class="btn-floating btn-large waves-effect waves-light orange lighten-3 modal-trigger"><i class="material-icons">launch</i></a>
-					</div>
 				</div>
-			</div>
-		</div>
-
-		<div id="full-screen" class="modal" style="width: 95%; max-height: 80%;">
-			<div class="modal-content">
-				<h1 style="font-size: 3em; text-align: center; border-bottom: solid #DCDCDC 1px; margin-bottom: 1em; padding-bottom: 0.25em;">{{ page.title }}</h1>
-				{{ content }}
-			</div>
-			<div class="modal-footer">
-				<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
 			</div>
 		</div>
 
@@ -121,10 +159,12 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 
 		<script>
+			// Modal init
 			$(document).ready(function(){
-				// the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
 				$('.modal-trigger').leanModal();
 			});
+			// Side Nav init
+			$(".button-collapse").sideNav();
 		</script>
 	</body>
 </html>
