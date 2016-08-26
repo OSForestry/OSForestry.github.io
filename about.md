@@ -35,4 +35,4 @@ Get involved as much or as little as you are comfortable. You can share code tha
 
 ### Contact
 
-If have questions or have an interest in OS Forestry, check out the join page [here](/join). Or contact admins directly at [info@forestry.tech](mailto:info@forestry.tech).
+If have questions or have an interest in OS Forestry, check out the join page [here](/join). Or contact admins directly at [info@osforestry.org](mailto:info@osforestry.org).
