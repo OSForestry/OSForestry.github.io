@@ -25,7 +25,7 @@ title: Forestry and GIS Jobs
 </style>
 
 <div id="jobs"></div>
-<p style="text-align: center;"><a style="color: black;" target="_blank" href="https://docs.google.com/forms/d/1X9gOcBp9A7k04w6Av1MdorOB2PYWielpnb4vgbdi8X0/edit?usp=sharing">Submit a Position</a></p>
+<p style="text-align: center;"><a style="color: black;" target="_blank" href="https://docs.google.com/forms/d/1X9gOcBp9A7k04w6Av1MdorOB2PYWielpnb4vgbdi8X0/">Submit a Position</a></p>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
